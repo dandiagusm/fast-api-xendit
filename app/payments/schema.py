@@ -3,7 +3,7 @@ from pydantic import BaseModel
 class CreatePaymentRequest(BaseModel):
     user_id: int
     amount: float
-    external_id: str  # from Briliq-BE
+    external_id: str
 
 class PaymentResponse(BaseModel):
     invoice_url: str
@@ -11,4 +11,4 @@ class PaymentResponse(BaseModel):
     status: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True  # (Pydantic v2)

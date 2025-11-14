@@ -20,7 +20,7 @@ class XenditClient:
         try:
             response.raise_for_status()
         except Exception:
-            print("XENDIT ERROR:", response.text)   # <--- ini akan kasih tahu apa salahnya
+            print("XENDIT ERROR:", response.text)
             raise
 
         return response.json()

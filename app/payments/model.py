@@ -14,9 +14,11 @@ class Payment(Base):
     invoice_url = Column(String)
     expiry_date = Column(String)
 
+    callback_processed_at = Column(DateTime(timezone=True), nullable=True)
+
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     updated_at = Column(
-        DateTime(timezone=True), 
-        server_default=func.now(), 
+        DateTime(timezone=True),
+        server_default=func.now(),
         onupdate=func.now()
     )
