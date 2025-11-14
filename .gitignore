@@ -1,0 +1,98 @@
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Byte-compiled / optimized / DLL files
+*.pyo
+*.pyd
+*.pydc
+
+# C extensions
+*.so
+
+# -----------------------------
+# Virtual Environment
+# -----------------------------
+venv/
+env/
+.venv/
+
+# VSCode Environment Directories
+.vscode/
+
+# PyCharm
+.idea/
+
+# -----------------------------
+# FastAPI / Uvicorn cache
+# -----------------------------
+*.log
+*.pid
+
+# -----------------------------
+# Alembic
+# -----------------------------
+migrations/versions/*.pyc
+migrations/versions/*~
+migrations/versions/*.bak
+
+# NEVER ignore actual migration files
+# DO NOT PUT: migrations/versions/ (keep migrations!)
+
+# -----------------------------
+# Environment Variables
+# -----------------------------
+.env
+.env.*
+!.env.example
+
+# -----------------------------
+# SQLite (if you ever use)
+# -----------------------------
+*.db
+*.sqlite3
+
+# -----------------------------
+# Test & Coverage
+# -----------------------------
+htmlcov/
+.tox/
+.nox/
+.coverage
+coverage.xml
+.cache
+pytest_cache/
+
+# -----------------------------
+# OS Files
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# Build Files
+# -----------------------------
+build/
+dist/
+*.egg-info/
+
+# -----------------------------
+# PyInstaller
+# -----------------------------
+*.spec
+
+# -----------------------------
+# Logs
+# -----------------------------
+logs/
+*.log
+
+# -----------------------------
+# Temp
+# -----------------------------
+tmp/
+temp/
+*.tmp
