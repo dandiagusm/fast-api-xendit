@@ -7,7 +7,7 @@ class XenditClient:
         url = "https://api.xendit.co/v2/invoices"
 
         headers = {"Content-Type": "application/json"}
-        auth = (settings.XENDIT_API_KEY, "")  # basic auth
+        auth = (settings.XENDIT_API_KEY, "")
 
         payload = {
             "external_id": external_id,
@@ -16,5 +16,11 @@ class XenditClient:
         }
 
         response = requests.post(url, json=payload, auth=auth, headers=headers)
-        response.raise_for_status()
+
+        try:
+            response.raise_for_status()
+        except Exception:
+            print("XENDIT ERROR:", response.text)   # <--- ini akan kasih tahu apa salahnya
+            raise
+
         return response.json()
