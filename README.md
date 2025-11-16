@@ -1,1 +1,1 @@
-# briliq-payment-system
+# fast-api-xendit
